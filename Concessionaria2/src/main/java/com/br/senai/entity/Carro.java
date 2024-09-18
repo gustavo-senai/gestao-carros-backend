@@ -103,7 +103,15 @@ public class Carro {
 
 	@Override
 	public String toString() {
-		return "Carro [id=" + id + ", placa=" + placa + ", ano=" + ano + "]";
+		return "Carro: "
+				+ "ID: " + id 
+				+ " Placa: " + placa 
+				+ " Modelo: " + modelo 
+				+ " Marca: " + marca 
+				+ " Cor: " + cor
+				+ " Ano: " + ano 
+				+ " Quilometragem: " + quilometragem 
+				+ " Estado: " + estado;
 	}
 	
 	

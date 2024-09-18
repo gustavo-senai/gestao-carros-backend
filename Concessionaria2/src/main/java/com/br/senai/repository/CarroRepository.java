@@ -8,4 +8,6 @@ import com.br.senai.entity.Carro;
 @Repository
 public interface CarroRepository extends JpaRepository<Carro, Integer> {
 
+	Carro findByPlaca(String placa);
+
 }

@@ -34,7 +34,12 @@ public class CarroService {
 		return carroRepository.findAll();
 	}
 	
+	public Carro conultarPor(String placa) {
+		return carroRepository.findByPlaca(placa);
+	}
+	
 	public Carro buscarPor(Integer id) {
 		return carroRepository.findById(id).orElse(null);
 	}
+
 }

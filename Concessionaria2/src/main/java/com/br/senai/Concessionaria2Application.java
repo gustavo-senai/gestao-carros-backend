@@ -36,7 +36,8 @@ public class Concessionaria2Application implements CommandLineRunner{
 						+ "2 - Remover \n"
 						+ "3 - Alterar \n"
 						+ "4 - Listar \n"
-						+ "5 - Sair");
+						+ "5 - Consultar carro \n"
+						+ "6 - Sair");
 				
 				opcaoMenu = scanner.nextInt();
 				
@@ -54,12 +55,15 @@ public class Concessionaria2Application implements CommandLineRunner{
 					listar();
 					break;
 				case 5:
+					consultarCarro();
+					break;
+				case 6:
 					System.out.println("Saindo");
 					break;
 				default:
 					System.out.println("Opção inválida");
 				}
-			} while (opcaoMenu != 5);
+			} while (opcaoMenu != 6);
 			
 		}catch(InputMismatchException e) {
 			System.out.println("O valor do campo de ser um número inteiro");
@@ -139,6 +143,13 @@ public class Concessionaria2Application implements CommandLineRunner{
 	
 	public void listar() {
 		mostrarLista(carroService.listarTodos());
+	}
+	
+	public void consultarCarro() {
+		System.out.println("Digite a placa do carro:");
+		String placa = scanner.next();
+		Carro carro = carroService.conultarPor(placa);
+		System.out.println(carro);
 	}
 	
 	public void mostrarLista(List<Carro> carros) {
