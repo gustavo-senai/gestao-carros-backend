@@ -10,4 +10,6 @@ public interface CarroRepository extends JpaRepository<Carro, Integer> {
 
 	Carro findByPlaca(String placa);
 
+	Carro findByPreco(Double preco);
+
 }

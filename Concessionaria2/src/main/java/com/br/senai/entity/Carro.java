@@ -30,11 +30,15 @@ public class Carro {
 	@Column(name="ano")
 	private Integer ano;
 	
-	@Column(name="quilometrage")
+	@Column(name="quilometragem")
 	private Integer quilometragem;
 	
 	@Column(name="estado")
 	private String estado;
+	
+	@Column(name= "preco")
+	 private Double preco;
+	 
 
 	
 	public Integer getId() {
@@ -100,6 +104,14 @@ public class Carro {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
+	public Double getPreco() {
+		return preco;
+	}
+	
+	public void setPreco (Double preco) {
+		this.preco = preco;
+	}
 
 	@Override
 	public String toString() {
@@ -111,8 +123,9 @@ public class Carro {
 				+ " Cor: " + cor
 				+ " Ano: " + ano 
 				+ " Quilometragem: " + quilometragem 
-				+ " Estado: " + estado;
-	}
+				+ " Estado: " + estado
+				+ " Preço: " + preco;
 	
-	
+ }
+
 }

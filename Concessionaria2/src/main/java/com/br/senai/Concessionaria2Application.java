@@ -93,6 +93,9 @@ public class Concessionaria2Application implements CommandLineRunner{
         System.out.println("Digite a Placa do carro:");
         carro.setPlaca(scanner.next());
         
+        System.out.println("Digite o Preço do carro:");
+        carro.setPreco(scanner.nextDouble());
+        
         carroService.inserir(carro);
 		System.out.println("Carro adicionado");
 		System.out.println(carro);
@@ -135,6 +138,8 @@ public class Concessionaria2Application implements CommandLineRunner{
         System.out.println("Digite a Placa do carro Atual: "+carroAlteracao.getPlaca());
         carroAlteracao.setPlaca(scanner.next());
         
+        System.out.println("Digite o Preço do carro Atual: "+carroAlteracao.getPreco());
+        carroAlteracao.setPreco(scanner.nextDouble());
         
         carroService.alterar(carroAlteracao);
 		System.out.println("Carro alterado");
@@ -157,4 +162,11 @@ public class Concessionaria2Application implements CommandLineRunner{
 			System.out.println(carro);
 		}
 	}
+	
+	/*public void preco () {
+		System.out.println("Qual carro você gostaria de saber o preço?");
+		Double preco = scanner.nextDouble();
+		Carro carro = carroService.buscarPor(preco);
+		System.out.println(carro);
+	}*/
 }

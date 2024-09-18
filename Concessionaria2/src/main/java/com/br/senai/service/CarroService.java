@@ -42,4 +42,7 @@ public class CarroService {
 		return carroRepository.findById(id).orElse(null);
 	}
 
+	public Carro buscarPor(Double preco) {
+		return carroRepository.findByPreco(preco);
+	}
 }
